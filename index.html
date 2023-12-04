@@ -2,5 +2,100 @@
 <html>
     <head>
         <title>Special Relativity!</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <!-- Bootstrap CSS library -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous"
+        />
+        <!-- Bootstrap JS library -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Bootstrap icons library -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        />
+        <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
+        <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
+        <script src="/src/js/script.js"></script>
+        <link rel="stylesheet" href="/src/css/style.css" />
     </head>
+    <body>
+        <header class="container">
+            <h1>Special Relativity</h1>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <h2>Special Relativity</h2>
+                        <ul>
+                            <li>The Laws of nature are the same for everyone</li>
+                            <li>The Speed of light is the same for everyone</li>
+                            <li>Motion is relative</li>
+                        </ul>
+                        
+                        <la-tex display="block">\gamma = \frac{1}{\sqrt{1-v^2/c^2}}</la-tex>
+                    </div>
+                    <div class="row">
+                        <h2>Time Dilation</h2>
+                        <p>Time passes slower in a moving reference frame.</p>
+                    
+                        <la-tex display="block">\Delta{t_{moving}} = \frac{\Delta{t_{rest}}}{\sqrt{1-v^2/c^2}}</la-tex>
+                    </div>
+                    <div class="row">
+                        <h2>Length Contraction</h2>
+                        <p>Moving objects appear shorter for the same reason that moving clocks run slow</p>
+                        
+                        <la-tex display="block">L = L_0\sqrt{1-v^2/c^2} = \frac{L_0}{\gamma}</la-tex>
+                    </div>
+                    <div class="row">
+                        <h2>Effect of motion on mass</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorentz Calculator</h5>
+                            <la-tex display="block">\gamma = \frac{1}{\sqrt{1-v^2/c^2}}</la-tex>
+                                
+                            <form>
+                                <label for="velocity">Velocity</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="velocity" aria-describedby="emailHelp" placeholder="Enter velocity">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">km/s</span>
+                                    </div>
+                                </div>
+                                <label for="time">Time</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="time" aria-describedby="emailHelp" placeholder="Enter velocity">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">s</span>
+                                    </div>
+                                </div>
+                                <label for="distance">Distance</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="distance" aria-describedby="emailHelp" placeholder="Enter velocity">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">km</span>
+                                    </div>
+                                </div>
+                                <button onclick="Calculate()" type="button" class="btn btn-primary">Calculate</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </body>
 </html>
